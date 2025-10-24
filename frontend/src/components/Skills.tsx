@@ -26,7 +26,6 @@ const Skills: React.FC = () => {
         { name: 'Python', icon: '/icons/Python.png' },
         { name: 'R', icon: "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" },
         { name: 'C', icon: "https://img.icons8.com/color/48/000000/c-programming.png" },
-        { name: 'C++', icon: "https://img.icons8.com/?size=100&id=40669&format=png&color=000000" },
         { name: 'Java', icon: "https://www.svgrepo.com/show/349418/java.svg" },
         { name: 'SQL', icon: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" },
         { name: 'JavaScript', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
@@ -58,9 +57,7 @@ const Skills: React.FC = () => {
         { name: 'Express', icon: 'https://cdn.brandfetch.io/idh1lvV1BF/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1756519165352' },
         { name: 'Tailwind CSS', icon: 'https://img.icons8.com/color/48/000000/tailwind_css.png' },
         { name: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
-        { name: 'Django', icon: 'https://img.icons8.com/color/48/000000/django.png' },
         { name: 'Shiny', icon: 'https://raw.githubusercontent.com/rstudio/hex-stickers/master/SVG/shiny.svg' },
-        { name: 'Flask', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg' },
         { name: 'Streamlit', icon: 'https://img.icons8.com/?size=96&id=Rffi8qeb2fK5&format=png' },
       ]
     },
@@ -82,7 +79,6 @@ const Skills: React.FC = () => {
         { name: 'GitHub', icon: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
         { name: 'Jupyter Notebook', icon: 'https://img.icons8.com/fluency/48/000000/jupyter.png' },
         { name: 'Google Colab', icon: 'https://img.icons8.com/?size=100&id=lOqoeP2Zy02f&format=png&color=000000' },
-        { name: 'Postman', icon: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg' },
         { name: 'Ollama', icon: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/ollama.png' },
       ]
     }

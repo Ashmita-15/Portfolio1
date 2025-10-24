@@ -21,7 +21,7 @@ const Projects = () => {
       image: '/projects/gramsathi.png',
       categories: ['AI/ML','Web Development'],
       tags: ['MERN', 'GenAi', 'WebSocket', 'Gemini API','Tailwind CSS'],
-      github: 'https://github.com/riku-d/SIH2025',
+      github: 'https://github.com/Ashmita-15/GramSathi',
       live: 'https://gramsathi1.onrender.com',
       youtube: 'https://www.youtube.com/watch?v=UKMqw93RWWU',
       featured: true
@@ -33,7 +33,7 @@ const Projects = () => {
       image: '/projects/dbuddy1.png',
       categories: ['AI/ML','Data Analysis'],
       tags: ['R Shiny','Data Cleaning','Data Visualization','Feature Engineering','XGBoost'],
-      github: 'https://github.com/riku-d/D-Buddy',
+      github: 'https://github.com/Ashmita-15/D-Buddy',
       live: 'https://rohit21.shinyapps.io/D-Buddy1/',
       youtube: null,
       report: 'reports/Dbuddy.pdf',
@@ -46,7 +46,7 @@ const Projects = () => {
       image: '/projects/vicket.png',
       categories: ['Blockchain','Web Development'],
       tags: ['React', 'Web3.js', 'Ethereum', 'MongoDB', 'Civic Authentication','Razorpay Integration'],
-      github: 'https://github.com/riku-d/Vi-cket',
+      github: 'https://github.com/Ashmita-15/Vi-cket',
       youtube:'https://www.youtube.com/watch?v=2yg2NUGDqd8',
       live: null,
       featured: false
@@ -58,7 +58,7 @@ const Projects = () => {
       image: '/projects/plateful.png',
       categories: ['AI/ML','Web Development','Data Analysis'],
       tags: ['MERN','chart.js','ANN', 'AI Chatbot', 'Carbon FootprintAnalytics'],
-      github: 'https://github.com/riku-d/Plateful',
+      github: 'https://github.com/Ashmita-15/Plateful',
       live: null,
       youtube: null,
       featured: false
@@ -71,8 +71,8 @@ const Projects = () => {
       image: '/projects/churn.png',
       categories: ['AI/ML'],
       tags: ['Pandas','NumPy','Scikit-learn','TensorFlow','Streamlit','ANN'],
-      github: 'https://github.com/riku-d/ANN-Churn-Classification',
-      live: 'https://ann-churn-classification-wfae88vfd5u4r4vhlac6oa.streamlit.app/',
+      github: 'https://github.com/Ashmita-15/ANN-Classification-Churn',
+      live: 'https://ann-classification-churn-nx4uzfywbzejghq2jyvwsj.streamlit.app/',
       featured: false
     }
   ]

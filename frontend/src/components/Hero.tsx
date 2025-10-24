@@ -1,11 +1,15 @@
-import React, { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Canvas } from "@react-three/fiber";
 import { ErrorBoundary } from "react-error-boundary";
+import Hero3D from "./Hero3D";
 
-// Lazy load the Hero3D component
-const Hero3D = React.lazy(() => import("./Hero3D"));
+// Preload the profile image
+if (typeof window !== 'undefined') {
+  const img = new Image();
+  img.src = '/pp.png';
+}
 
 const Hero = () => {
   const [typingText, setTypingText] = useState('');
@@ -49,7 +53,12 @@ const Hero = () => {
   }, [typingText, currentTextIndex, taglines]);
 
   const handleResumeDownload = () => {
-    window.open(`${import.meta.env.VITE_API_URL}/api/resume/download`, '_blank');
+    const link = document.createElement('a');
+    link.href = `${import.meta.env.VITE_API_URL}/api/resume/download`;
+    link.download = 'Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -108,14 +117,7 @@ const Hero = () => {
                 <span>Download Resume</span>
               </motion.button>
               
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="#contact"
-                className="flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 border border-blue-500 text-blue-400 hover:bg-blue-500/10 text-sm sm:text-base"
-              >
-                Get In Touch
-              </motion.a>
+              
             </motion.div>
 
             {/* Social links */}
@@ -161,16 +163,14 @@ const Hero = () => {
             className="relative w-full max-w-[480px] aspect-square sm:max-w-full flex items-center justify-center order-1 md:order-2 mx-auto"
           >
             <ErrorBoundary fallback={<FallbackAnimation />}>
-              <Suspense fallback={<FallbackAnimation />}>
-                <div className="w-full h-full max-w-[480px] sm:max-w-full mx-auto">
-                  <Canvas
-                    camera={{ position: [0, 0, 4], fov: 50 }}
-                    style={{ background: 'transparent' }}
-                  >
-                    <Hero3D />
-                  </Canvas>
-                </div>
-              </Suspense>
+              <div className="w-full h-full max-w-[480px] sm:max-w-full mx-auto">
+                <Canvas
+                  camera={{ position: [0, 0, 4], fov: 50 }}
+                  style={{ background: 'transparent' }}
+                >
+                  <Hero3D />
+                </Canvas>
+              </div>
             </ErrorBoundary>
           </motion.div>
         </div>
@@ -183,7 +183,7 @@ const Hero = () => {
 const FallbackAnimation = () => {
   return (
     <div className="w-[420px] h-[420px] relative flex items-center justify-center">
-      <div className="text-white text-lg">Loading 3D Profile...</div>
+      {/* Silent loading - no text shown */}
     </div>
   );
 };

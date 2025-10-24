@@ -28,16 +28,16 @@ const Education = () => {
 
   const experiences = [
     {
-      role: 'AI/ML Intern',
-      company: 'TechLabs (Remote)',
-      period: 'Jun 2024 - Aug 2024',
-      description: 'Built prototypes for ML pipelines and lightweight RAG demos for internal PoCs.'
+      role: 'Software Engineer Fellow',
+      company: 'Headstarter AI, NY (Remote)',
+      period: 'July 2024 - September 2024',
+      description: 'Built 2 AI-powered web applications integrating Next.js, Google Gemini and Firebase working cross-functionality with a remote team to ship MVPs'
     },
     {
-      role: 'Full-Stack Trainee',
-      company: 'DevWorks Studio',
-      period: 'Jan 2024 - Apr 2024',
-      description: 'Contributed to MERN dashboards; implemented charts and auth flows.'
+      role: 'AI Engineer Intern',
+      company: 'Global Tech Solutions',
+      period: 'June 2025 - July 2025',
+      description: 'Developed a web platform connecting donors,restaurants and NGOs to redistribute surplus food. Integrated an ANN model for intelligent food matching and an AI chatbot for  user assistance'
     }
   ]
 

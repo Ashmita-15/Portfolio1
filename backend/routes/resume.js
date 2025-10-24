@@ -7,7 +7,7 @@ const router = express.Router();
 // GET /resume or /resume/download
 router.get(['/', '/download'], (req, res) => {
   try {
-    const resumePath = path.join(__dirname, '../public/Rohit_Dutta_Resume.pdf');
+    const resumePath = path.join(__dirname, '../public/Resume.pdf');
     
     // Check if resume file exists
     if (!fs.existsSync(resumePath)) {
@@ -19,8 +19,10 @@ router.get(['/', '/download'], (req, res) => {
 
     // Set headers for file download
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', 'attachment; filename="Rohit_Dutta_Resume.pdf"');
-    res.setHeader('Cache-Control', 'public, max-age=3600'); // Cache for 1 hour
+    res.setHeader('Content-Disposition', 'attachment; filename="Resume.pdf"');
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
 
     // Stream the file
     const fileStream = fs.createReadStream(resumePath);

@@ -24,9 +24,10 @@ const Hero3D = () => {
 
   return (
     <>
-      {/* Simple lighting */}
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[0, 5, 5]} intensity={0.8} />
+      {/* Enhanced lighting for bright and radiant profile picture */}
+      <ambientLight intensity={1.5} />
+      <directionalLight position={[0, 5, 5]} intensity={1.2} />
+      <pointLight position={[0, 0, 2]} intensity={0.8} color="#ffffff" />
 
       {/* Simple Profile Image with glow */}
       <SimpleProfileImage 
@@ -56,7 +57,7 @@ const SimpleProfileImage = ({ position, mobile, isHovered, setIsHovered }: {
 }) => {
   const meshRef = useRef<Mesh>(null)
   const glowRef = useRef<Mesh>(null)
-  const texture = useTexture('/ro_img.jpeg')
+  const texture = useTexture('/ashm.webp')
 
   useFrame((state) => {
     if (meshRef.current) {
@@ -110,7 +111,7 @@ const SimpleProfileImage = ({ position, mobile, isHovered, setIsHovered }: {
         onPointerLeave={() => setIsHovered(false)}
       >
         <circleGeometry args={[size, 32]} />
-        <meshBasicMaterial map={texture} transparent opacity={1} />
+        <meshBasicMaterial map={texture} toneMapped={false} />
       </mesh>
     </group>
   )
