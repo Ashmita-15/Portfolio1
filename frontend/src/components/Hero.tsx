@@ -52,14 +52,14 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [typingText, currentTextIndex, taglines]);
 
-  const handleResumeDownload = () => {
-    const link = document.createElement('a');
-    link.href = `${import.meta.env.VITE_API_URL}/api/resume/download`;
-    link.download = 'Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // const handleResumeDownload = () => {
+  //   const link = document.createElement('a');
+  //   link.href = `${import.meta.env.VITE_API_URL}/api/resume/download`;
+  //   link.download = 'Resume.pdf';
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   return (
     <section 
@@ -107,15 +107,16 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start mb-6 sm:mb-8"
             >
-              <motion.button
+              <motion.a
+                href="/Resume.pdf"  // points to your public file
+                download="Ashmita_Resume.pdf" // this name will be used for download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleResumeDownload}
                 className="flex items-center justify-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm sm:text-base"
               >
                 <Download size={18} />
                 <span>Download Resume</span>
-              </motion.button>
+              </motion.a>
               
               
             </motion.div>
